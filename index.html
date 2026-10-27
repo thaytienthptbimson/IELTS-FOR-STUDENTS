@@ -39,8 +39,10 @@ a{color:var(--brand2)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 
 /* ---------- TOP BAR ---------- */
-.topbar{position:sticky;top:0;z-index:50;background:linear-gradient(100deg,var(--brand),var(--brand2));color:#fff;display:flex;align-items:center;gap:14px;padding:10px 18px;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+.topbar{position:sticky;top:12px;z-index:50;background:linear-gradient(100deg,var(--brand),var(--brand2));color:#fff;display:flex;align-items:center;gap:14px;padding:10px 20px;box-shadow:0 6px 18px rgba(8,20,60,.28);border-radius:22px;width:calc(100% - 36px);max-width:1144px;margin:12px auto 0;box-sizing:border-box}
+body:has(.exam-body) .topbar{max-width:1464px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px;cursor:pointer;background:none;border:0;color:#fff;padding:0}
+.brand{text-align:left}
 .brand svg{flex:none}
 .brand small{display:block;font-weight:500;font-size:11px;opacity:.78;letter-spacing:.6px;text-transform:uppercase}
 .topbar .grow{flex:1}
@@ -56,7 +58,9 @@ a{color:var(--brand2)}
 /* ---------- LAYOUT ---------- */
 main{flex:1;width:100%}
 .wrap{max-width:1180px;margin:0 auto;padding:22px 18px 40px}
-.footer{background:var(--brand);color:#c8d6f5;text-align:center;padding:16px 14px;font-size:13.5px;line-height:1.7}
+.footer{background:linear-gradient(100deg,var(--brand),var(--brand2));color:#c8d6f5;text-align:center;padding:18px 20px;font-size:13.5px;line-height:1.7;border-radius:22px;width:calc(100% - 36px);max-width:1144px;margin:6px auto 18px;box-sizing:border-box;box-shadow:0 6px 18px rgba(8,20,60,.22)}
+body:has(.exam-body) .footer{max-width:1464px}
+body:has(.palette) .footer{margin-bottom:78px}
 .footer b{color:#fff}
 .footer a{color:#9ee7de}
 
@@ -303,7 +307,8 @@ audio{width:100%;margin:6px 0}
   .pane{height:auto;max-height:70vh}
   textarea.essay{min-height:360px}
   .result-hero{justify-items:center;text-align:center}
-  .topbar{flex-wrap:wrap}
+  .topbar{flex-wrap:wrap;top:8px;margin-top:8px;padding:10px 14px}
+  .footer{margin-bottom:12px;padding:16px 14px}
   .opts{margin-left:0}
   .hero{padding:24px 20px}
 }
